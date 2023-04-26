@@ -1,7 +1,6 @@
 import 'package:expense_tracker/Widgets/expense_list/expense_list.dart';
 import 'package:expense_tracker/model/expense.dart';
 import 'package:expense_tracker/Widgets/new_expense.dart';
-
 import 'package:flutter/material.dart';
 
 
