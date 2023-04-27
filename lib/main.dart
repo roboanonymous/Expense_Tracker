@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:expense_tracker/Widgets/expenses.dart';
 
 void main() {
@@ -13,7 +14,10 @@ void main() {
 
 
   runApp(
-     MaterialApp(
+    SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, 
+      ].then((fn){
+         MaterialApp(
        darkTheme: ThemeData.dark().copyWith(
         useMaterial3: true,
         colorScheme: kDarkColorScheme,
@@ -60,5 +64,8 @@ void main() {
       ),
       home: const Expenses(),
     ),
+      })
+    ) as Widget;
+    
   );
 }
